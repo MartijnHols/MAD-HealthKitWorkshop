@@ -56,6 +56,28 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         }
 	}
 	
+	func bpmToHappiness(dbpm: Double?) -> Double {
+		if dbpm == nil {
+			return 50
+		} else {
+			let bpm = dbpm!
+			if bpm < 45 {
+				return bpm / 40 * 15
+			} else if bpm < 60.0 {
+				return bpm / 60.0 * 40
+			} else if bpm > 100.0 {
+				// 0-40
+				return (80.0 - (min(bpm, 180.0) - 100)) / 80.0 * 40.0
+			} else {
+				if bpm < 68.0 {
+					return 50.0 + (bpm - 60.0) / 8.0 * 50.0
+				} else {
+					return 50.0 + (32 - (bpm - 68.0)) / 32.0 * 50.0
+				}
+			}
+		}
+	}
+	
 	func getAge() -> Int? {
 		var error: NSError?
 		var age: Int?
@@ -93,37 +115,19 @@ class HappinessViewController: UIViewController, FaceViewDataSource
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				self.happiness = Int(self.bpmToHappiness(bpm))
 				println("self.happiness=\(self.happiness)")
-				self.heartRateLabel.text = "\(Int(bpm!))"
+				if bpm != nil {
+					self.heartRateLabel.text = "\(Int(bpm!))"
+				} else {
+					self.heartRateLabel.text = "?"
+				}
 			});
 		});
-	}
-	
-	func bpmToHappiness(dbpm: Double?) -> Double {
-		if dbpm == nil {
-			return 50
-		} else {
-			let bpm = dbpm!
-			if bpm < 45 {
-				return bpm / 40 * 15
-			} else if bpm < 60.0 {
-				return bpm / 60.0 * 40
-			} else if bpm > 100.0 {
-				// 0-40
-				return (80.0 - (min(bpm, 180.0) - 100)) / 80.0 * 40.0
-			} else {
-				if bpm < 68.0 {
-					return 50.0 + (bpm - 60.0) / 8.0 * 50.0
-				} else {
-					return 50.0 + (32 - (bpm - 68.0)) / 32.0 * 50.0
-				}
-			}
-		}
 	}
 	
 	private func readMostRecentSample(sampleType: HKSampleType, completion: ((HKSample!, NSError!) -> Void)!) {
 		// 1. Build the Predicate
 		let past = NSDate.distantPast() as! NSDate
-		let now   = NSDate()
+		let now = NSDate()
 		let mostRecentPredicate = HKQuery.predicateForSamplesWithStartDate(past, endDate:now, options: .None)
 		
 		// 2. Build the sort descriptor to return the samples in descending order
@@ -135,7 +139,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
 		let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: mostRecentPredicate, limit: limit, sortDescriptors: [sortDescriptor], resultsHandler: { (sampleQuery, results, error ) -> Void in
 			if let queryError = error {
 				completion(nil,error)
-				return;
+				return
 			}
 			
 			// Get the first sample
