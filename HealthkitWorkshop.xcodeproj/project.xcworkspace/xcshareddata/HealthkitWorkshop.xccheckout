@@ -7,46 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>706557EB-D67E-45B5-A700-7205BC76E497</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>HealthkitWorkshop</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>350CAE8948E2E67C71260D3516273C2F96DC5A97</key>
-		<string>https://github.com/HANICA/MAD-student-MartijnHols.git</string>
-		<key>F179FCE73F239366DE53F97A0596F70CC1E25AA9</key>
-		<string>https://github.com/HANICA/mad-martijn-en-lars.git</string>
+		<key>9D14F78B86B63FA426FCE34D45877286AB4E1536</key>
+		<string>https://github.com/MartijnHols/MAD-HealthKitWorkshop.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HealthkitWorkshop/HealthkitWorkshop.xcodeproj/project.xcworkspace</string>
+	<string>HealthkitWorkshop.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>350CAE8948E2E67C71260D3516273C2F96DC5A97</key>
-		<string>../../../..</string>
-		<key>F179FCE73F239366DE53F97A0596F70CC1E25AA9</key>
-		<string>../../..</string>
+		<key>9D14F78B86B63FA426FCE34D45877286AB4E1536</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/HANICA/mad-martijn-en-lars.git</string>
+	<string>https://github.com/MartijnHols/MAD-HealthKitWorkshop.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F179FCE73F239366DE53F97A0596F70CC1E25AA9</string>
+	<string>9D14F78B86B63FA426FCE34D45877286AB4E1536</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>350CAE8948E2E67C71260D3516273C2F96DC5A97</string>
+			<string>9D14F78B86B63FA426FCE34D45877286AB4E1536</string>
 			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F179FCE73F239366DE53F97A0596F70CC1E25AA9</string>
-			<key>IDESourceControlWCCName</key>
-			<string>mad-martijn-en-lars</string>
+			<string>MAD-HealthKitWorkshop</string>
 		</dict>
 	</array>
 </dict>
