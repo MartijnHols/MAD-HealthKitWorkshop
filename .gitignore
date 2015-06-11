@@ -1,2 +1,8 @@
 .DS_Store
-
+.Trashes
+xcuserdata/
+.xccheckout
+DerivedData/
+build/
+*~.nib
+*.lock
