@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285D2B6F1B29A95700A9D5F2 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D2B6D1B29A95700A9D5F2 /* HappinessViewController.swift */; };
+		285D2B701B29A95700A9D5F2 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D2B6E1B29A95700A9D5F2 /* FaceView.swift */; };
 		28893C081B2975AD0057C8DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28893C071B2975AD0057C8DA /* AppDelegate.swift */; };
-		28893C0A1B2975AD0057C8DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28893C091B2975AD0057C8DA /* ViewController.swift */; };
+		28893C0A1B2975AD0057C8DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28893C091B2975AD0057C8DA /* MainViewController.swift */; };
 		28893C0D1B2975AD0057C8DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28893C0B1B2975AD0057C8DA /* Main.storyboard */; };
 		28893C0F1B2975AD0057C8DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28893C0E1B2975AD0057C8DA /* Images.xcassets */; };
 		28893C121B2975AD0057C8DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28893C101B2975AD0057C8DA /* LaunchScreen.xib */; };
@@ -27,11 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		28706CAD1B297B45006BB896 /* HealthkitWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = HealthkitWorkshop.app; path = "/Users/madmax/Workspace/MAD-HealthKitWorkshop/build/Debug-iphoneos/HealthkitWorkshop.app"; sourceTree = "<absolute>"; };
-		28706CAE1B297B45006BB896 /* HealthkitWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = HealthkitWorkshopTests.xctest; path = "/Users/madmax/Workspace/MAD-HealthKitWorkshop/build/Debug-iphoneos/HealthkitWorkshopTests.xctest"; sourceTree = "<absolute>"; };
+		285D2B691B2992E900A9D5F2 /* HealthkitWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthkitWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		285D2B6A1B2992E900A9D5F2 /* HealthkitWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthkitWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		285D2B6D1B29A95700A9D5F2 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
+		285D2B6E1B29A95700A9D5F2 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		28893C061B2975AD0057C8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28893C071B2975AD0057C8DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28893C091B2975AD0057C8DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28893C091B2975AD0057C8DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		28893C0C1B2975AD0057C8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28893C0E1B2975AD0057C8DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		28893C111B2975AD0057C8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,14 +70,18 @@
 				28893C2A1B2977080057C8DA /* HealthKit.framework */,
 				28893C041B2975AD0057C8DA /* HealthkitWorkshop */,
 				28893C1A1B2975AD0057C8DA /* HealthkitWorkshopTests */,
+				285D2B691B2992E900A9D5F2 /* HealthkitWorkshop.app */,
+				285D2B6A1B2992E900A9D5F2 /* HealthkitWorkshopTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		28893C041B2975AD0057C8DA /* HealthkitWorkshop */ = {
 			isa = PBXGroup;
 			children = (
-				28893C091B2975AD0057C8DA /* ViewController.swift */,
+				28893C091B2975AD0057C8DA /* MainViewController.swift */,
 				28893C0B1B2975AD0057C8DA /* Main.storyboard */,
+				285D2B6D1B29A95700A9D5F2 /* HappinessViewController.swift */,
+				285D2B6E1B29A95700A9D5F2 /* FaceView.swift */,
 				28893C051B2975AD0057C8DA /* Supporting Files */,
 			);
 			path = HealthkitWorkshop;
@@ -125,7 +133,7 @@
 			);
 			name = HealthkitWorkshop;
 			productName = HealthkitWorkshop;
-			productReference = 28706CAD1B297B45006BB896 /* HealthkitWorkshop.app */;
+			productReference = 285D2B691B2992E900A9D5F2 /* HealthkitWorkshop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		28893C161B2975AD0057C8DA /* HealthkitWorkshopTests */ = {
@@ -143,7 +151,7 @@
 			);
 			name = HealthkitWorkshopTests;
 			productName = HealthkitWorkshopTests;
-			productReference = 28706CAE1B297B45006BB896 /* HealthkitWorkshopTests.xctest */;
+			productReference = 285D2B6A1B2992E900A9D5F2 /* HealthkitWorkshopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -214,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28893C0A1B2975AD0057C8DA /* ViewController.swift in Sources */,
+				28893C0A1B2975AD0057C8DA /* MainViewController.swift in Sources */,
+				285D2B6F1B29A95700A9D5F2 /* HappinessViewController.swift in Sources */,
 				28893C081B2975AD0057C8DA /* AppDelegate.swift in Sources */,
+				285D2B701B29A95700A9D5F2 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
