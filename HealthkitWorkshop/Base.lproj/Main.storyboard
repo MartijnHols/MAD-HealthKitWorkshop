@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--HealthKit Permission-->
@@ -50,20 +51,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6N-b9-Arb">
-                                        <rect key="frame" x="8" y="8" width="34" height="21"/>
+                                        <rect key="frame" x="8" y="40" width="100" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="34" id="Qgj-E2-mdE"/>
+                                            <constraint firstAttribute="width" constant="100" id="Qgj-E2-mdE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kI-8Q-SdH">
+                                        <rect key="frame" x="539" y="36" width="53" height="30"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refresh_click:" destination="afc-aU-Kb1" eventType="touchUpInside" id="KZg-V0-kJa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="T6N-b9-Arb" firstAttribute="leading" secondItem="LPx-34-xDO" secondAttribute="leading" constant="8" id="3NL-dC-csK"/>
-                                    <constraint firstItem="T6N-b9-Arb" firstAttribute="top" secondItem="LPx-34-xDO" secondAttribute="top" constant="8" id="8Bt-cb-wit"/>
+                                    <constraint firstItem="T6N-b9-Arb" firstAttribute="top" secondItem="LPx-34-xDO" secondAttribute="top" constant="40" id="8Bt-cb-wit"/>
+                                    <constraint firstItem="8kI-8Q-SdH" firstAttribute="trailing" secondItem="LPx-34-xDO" secondAttribute="trailingMargin" id="Ama-Zf-8bS"/>
+                                    <constraint firstItem="8kI-8Q-SdH" firstAttribute="baseline" secondItem="T6N-b9-Arb" secondAttribute="baseline" id="C30-qe-Agl"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -86,6 +98,7 @@
                             <constraint firstAttribute="trailing" secondItem="LPx-34-xDO" secondAttribute="trailing" id="nvz-0y-KiU"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="sbQ-Sg-483"/>
                     <connections>
                         <outlet property="faceView" destination="LPx-34-xDO" id="0LE-yM-1LT"/>

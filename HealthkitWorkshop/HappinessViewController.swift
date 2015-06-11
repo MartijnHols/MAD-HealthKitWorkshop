@@ -14,6 +14,12 @@ class HappinessViewController: UIViewController, FaceViewDataSource
 	var healthStore: HKHealthStore?
 	
 	override func viewDidLoad() {
+		refresh()
+	}
+	@IBAction func refresh_click(sender: UIButton) {
+		refresh()
+	}
+	func refresh() {
 		let age = getAge()
 		println("Age: \(age)")
 		updateHeartRate()
